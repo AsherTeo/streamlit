@@ -30,7 +30,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-local_css("C:/Users/Lim Fong/Documents/streamlit/style/style.css")
+local_css("./style/style.css")
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
@@ -76,13 +76,13 @@ st.markdown(
 
 #add_bg_from_local('C:/Users/User/Desktop/streamlit/blueprint.jpg')  
 
-img_1 = Image.open('C:/Users/Lim Fong/Documents/streamlit/cat1.jpg')
-img_2 = Image.open('C:/Users/Lim Fong/Documents/streamlit/network1.PNG')
+# img_1 = Image.open('C:/Users/Lim Fong/Documents/streamlit/cat1.jpg')
+# img_2 = Image.open('C:/Users/Lim Fong/Documents/streamlit/network1.PNG')
 
-img_1 = img_1.resize((600,300))
-img_2 = img_2.resize((600,300))
+# img_1 = img_1.resize((600,300))
+# img_2 = img_2.resize((600,300))
 
-gif_1 = open("C:/Users/Lim Fong/Documents/streamlit/cat.gif", "rb")
+gif_1 = open("./cat.gif", "rb")
 contents = gif_1.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 gif_1.close()
@@ -100,8 +100,8 @@ with st.container():
     st.write('--')
     st.header('This is the Resnet 101 architecture')
     image_column, text_column = st.columns((2,1))
-    with image_column:
-       st.image(img_2)
+    # with image_column:
+    #    st.image(img_2)
 
     st.header('Cat classication')
     st.write('##')
